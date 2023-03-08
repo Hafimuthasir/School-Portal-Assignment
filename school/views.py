@@ -102,10 +102,7 @@ class AddBulkStudents(APIView):
                     {"name": student_data['name'], "error": serializer.errors})
 
         error_count = len(errors)
-        errored_students = []
-        # for error in errors:
-        #     print (error)
-        #     errored_students.append({'name': error['name'][0]})
+
 
         if error_count == 0:
             return Response({"message": "All Data have been saved Successfully", "status": "success"})
@@ -175,7 +172,7 @@ class FilterByGrade(APIView):
 
 class StudentCredentialsUpdate(APIView):
     """
-    API view to update a student's name.
+    API view to update a student's name and password.
     """
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
