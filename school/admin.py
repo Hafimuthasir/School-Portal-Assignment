@@ -3,7 +3,7 @@ from .models import School
 from student.models import Student
 from django.contrib.auth.models import Group
 
-# Register your models here.
+
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('name', 'school', 'grade')
     list_filter = ('grade','school')

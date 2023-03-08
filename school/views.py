@@ -15,8 +15,6 @@ from .jwt_utils import retrieve_id
 from django.http import JsonResponse
 
 
-# Create your views here.
-
 
 class SchoolRegister(APIView):
     """
